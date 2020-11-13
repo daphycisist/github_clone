@@ -1,0 +1,9 @@
+{
+  "name": "Github_clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^15.4.0"
+  }
+}
