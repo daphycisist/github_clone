@@ -23,8 +23,9 @@ query {
      avatarUrl
      login
      bio
+     name
      
-     repositories(first: 20) {
+     repositories(first: 20, ) {
        totalCount
          nodes{
            name
@@ -57,9 +58,12 @@ const getMyGithubData = async () => {
     // fetchGraphQL(query).then(res => console.log(res)).catch(console.error);
   
   const response = await fetchGraphQL(query);
-  console.log(response.data.user.avatarUrl)
-  const profileImg = document.getElementById("profileimg");
-  profileImg.src = response.data.user.avatarUrl;
+  console.log(response.data.user.name)
+  const navProfileImg = document.getElementById("profileimg");
+  const asideProfileImg = document.getElementById("aside-profile-image");
+  navProfileImg.src = response.data.user.avatarUrl;
+
+  
 }
 
 getMyGithubData()

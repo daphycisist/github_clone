@@ -7,7 +7,8 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/src/css/style.css" media="screen" />
     <script src="https://kit.fontawesome.com/ff3e17642a.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Your Repositories</title>
+    <link rel="icon" href="/src/images/github.svg" type="image/svg">
 </head>
 <body>
     <header>
@@ -32,14 +33,27 @@
                 </div>
             </div>
         </div>
-
-        <div class="bottom-nav">
-            <a href=""><img src="src/images/book-open.svg" alt="book-open" class="nav-svg">Overview</a>
-            <a href=""><img src="src/images/repository.svg" alt="book-open" class="nav-svg">Repositories</a>
-            <a href=""><img src="src/images/projects.svg" alt="book-open" class="nav-svg">Projects</a>
-            <a href=""><img src="src/images/packages.svg" alt="book-open" class="nav-svg">Packages</a>
-        </div>
     </header>
+
+    <div class="bottom-nav-wrapper ">
+        <div class="bottom-nav-container container">
+            <div class="empty-nav-div"></div>
+            <div class="bottom-nav">
+                <a href=""><img src="src/images/book-open.svg" alt="book-open" class="nav-svg">Overview</a>
+                <a href="" class="active"><img src="src/images/repository.svg" alt="book-open" class="nav-svg">Repositories<p
+                        id="repo-number">28</p></a>
+                <a href=""><img src="src/images/projects.svg" alt="book-open" class="nav-svg">Projects</a>
+                <a href=""><img src="src/images/packages.svg" alt="book-open" class="nav-svg">Packages</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="content container">
+        <aside class="profile">
+            <img src="" alt="" id="aside-profile-image">
+        </aside>
+        <aside></aside>
+    </section>
     
     <script src="src/config.js"></script>
 </body>
