@@ -28,14 +28,14 @@
                     <i class="fas fa-caret-down"></i>
                 </div>
                 <div class="nav-icon-container">
-                    <img src="" alt="" id="profileimg">
+                <img src="" alt="" id="profileimg">
                     <i class="fas fa-caret-down"></i>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="bottom-nav-wrapper ">
+    <div class="bottom-nav-wrapper">
         <div class="bottom-nav-container container">
             <div class="empty-nav-div"></div>
             <div class="bottom-nav">
@@ -48,13 +48,34 @@
         </div>
     </div>
 
-    <section class="content container">
-        <aside class="profile">
-            <img src="" alt="" id="aside-profile-image">
-        </aside>
-        <aside></aside>
+    <section class="">
+        <div class="container content-wrapper">
+            <aside class="profile">
+                <div class="profile-img-container">
+                    <img src="" alt="" id="aside-profile-image">
+                    <div class="about-wrapper">
+                        <div id="profile-name"></div>
+                        <div id="about"></div>
+                    </div>
+                </div>
+            </aside>
+            <aside class="content">
+                <div class="content-filter">
+                    <input type="search" name="search" class="searchbar reposearch" placeholder="Find a repository...">
+                </div>
+                <div class="repo-search-result">
+                    <p id="check"><span id="public-repo-number"></span> results for <span id="public-repo-number">public</span> repositories</p>
+                </div>
+                <div class="repo-content-wrapper">
+                    <div id="repo-content">
+                    
+                    </div>
+                    <div></div>
+                </div>
+            </aside>
+        </div>
     </section>
     
-    <script src="src/config.js"></script>
+    <script src="src/js/config.js"></script>
 </body>
 </html>
