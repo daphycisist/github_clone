@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav {
+  width: 100%;
+}
+
+.top-nav {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #24292e;
+  padding: 1rem;
+  font-size: 14px;
+  color: #ffffff;
+  z-index: 32;
+  justify-content: space-between;
+}
+
+.navleft {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  width: 700px;
+  width: 40rem;
+}
+
+.navleft > .logo {
+  font-size: 2.2rem;
+}
+
+.searchbar {
+  outline: none;
+  color: #999b9e;
+  width: 17rem;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 7px;
+  border: 1px solid #444d56;
+  background-color: transparent;
+}
+
+.navlist {
+  display: flex;
+  list-style: none;
+}
+
+.navleft > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.navright {
+  display: flex;
+  justify-content: space-evenly;
+  width: 9rem;
+  align-items: center;
+}
+
+.navright > .bell {
+  font-size: 1.1rem;
+}
+
+.navright .add-icon {
+  font-size: 1rem;
+  color: #b4b6b7;
+}
+
+.nav-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.navright .fa-caret-down {
+  margin-left: 0.3rem;
+}
+
+.navright #profileimg {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.bottom-nav-wrapper {
+  border-bottom: 1px solid #caced1;
+}
+
+.container {
+  margin: 0 2rem;
+}
+
+.bottom-nav-container {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.empty-nav-div {
+  /* border: 1px solid red; */
+  width: 30%;
+  padding: 0 3rem;
+}
+
+.bottom-nav {
+  display: flex;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.bottom-nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #45494d;
+  padding: 1rem 0.5rem;
+  margin: 0 2px;
+  font-size: 14px;
+}
+
+.bottom-nav .active {
+  font-weight: 500;
+  border-bottom: 2px solid #ee806b;
+}
+
+.bottom-nav .nav-svg {
+  margin-right: 0.5rem;
+}
+
+.repos {
+  display: flex;
+}
+
+#repo-number {
+  font-size: 14px;
+  padding: 2px 6px;
+  background-color: #e8eaed;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+.content-wrapper {
+  display: flex;
+}
+
+.profile {
+  padding: 0 1rem;
+  /* border: 1px solid red; */
+  width: 25%;
+
+}
+
+.profile-img-container {
+  /* width: 25%; */
+  width: 100%;
+  height: 18rem;
+  text-align: center;
+}
+
+#aside-profile-image {
+  border-radius: 50%;
+  display: relative;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  transform: translateY(-30px);
+}
+
+#aside-profile-image::before {
+  display: absolute;
+  content: "🙂";
+  background-color: red;
+  z-index: 500;
+}
+
+.content {
+  padding: 0 1rem;
+  width: 75%;
+  /* border: 1px solid green; */
+}
+
+.content-filter {
+    padding: 10px 20px;
+    border-bottom: 1px solid #EAECEF;
+}
+
+.reposearch {
+  border-color: #E1E4E8;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+#profile-name, #about {
+    padding: 10px 0;
+    text-align: left;
+    color: #24292E;
+}
+
+#profile-name > h1 {
+    font-size: 1.6rem;
+}
+
+#profile-name > p {
+    color: #5D656E;
+    font-size: 1.3rem;
+}
+
+.repo-search-result {
+    font-size: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #EAECEF;
+    width: fit-content;
+}
+
+
+#public-repo-number {
+    font-weight: bold;
+}
+
+
+.repo-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.repo-data-wrapper {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+#repo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.repo-title {
+
+}
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/src/css/style.css" media="screen" />
+    <script src="https://kit.fontawesome.com/ff3e17642a.js" crossorigin="anonymous"></script>
+    <title>Your Repositories</title>
+    <link rel="icon" href="/src/images/github.svg" type="image/svg">
+</head>
+<body>
+    <header>
+        <div class="top-nav nav">
+            <div class="navleft">
+                <i class="fab fa-github logo"></i>
+                <input type="search" name="search" class="searchbar" placeholder="Search or jump to... ">
+                <a href="">Pull request</a>
+                <a href="">Issues</a>
+                <a href="">Marketplace</a>
+                <a href="">Explore</a>
+            </div>
+            <div class="navright">
+                <i class="far fa-bell bell"></i>
+                <div class="nav-icon-container">
+                    <i class="fas fa-plus add-icon"></i>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="nav-icon-container">
+                <img src="" alt="" id="profileimg">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bottom-nav-wrapper">
+        <div class="bottom-nav-container container">
+            <div class="empty-nav-div"></div>
+            <div class="bottom-nav">
+                <a href=""><img src="src/images/book-open.svg" alt="book-open" class="nav-svg">Overview</a>
+                <a href="" class="active"><img src="src/images/repository.svg" alt="book-open" class="nav-svg">Repositories<p
+                        id="repo-number">28</p></a>
+                <a href=""><img src="src/images/projects.svg" alt="book-open" class="nav-svg">Projects</a>
+                <a href=""><img src="src/images/packages.svg" alt="book-open" class="nav-svg">Packages</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="">
+        <div class="container content-wrapper">
+            <aside class="profile">
+                <div class="profile-img-container">
+                    <img src="" alt="" id="aside-profile-image">
+                    <div class="about-wrapper">
+                        <div id="profile-name"></div>
+                        <div id="about"></div>
+                    </div>
+                </div>
+            </aside>
+            <aside class="content">
+                <div class="content-filter">
+                    <input type="search" name="search" class="searchbar reposearch" placeholder="Find a repository...">
+                </div>
+                <div class="repo-search-result">
+                    <p id="check"><span id="public-repo-number"></span> results for <span id="public-repo-number">public</span> repositories</p>
+                </div>
+                <div class="repo-content-wrapper">
+                    <div id="repo-content">
+                    
+                    </div>
+                    <div></div>
+                </div>
+            </aside>
+        </div>
+    </section>
+    
+    <script src="src/js/config.js"></script>
+</body>
+</html>
