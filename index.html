@@ -16,7 +16,8 @@
             <div class="navleft">
                 <i class="fab fa-github logo"></i>
                 <input type="search" name="search" class="searchbar" placeholder="Search or jump to... ">
-                <a href="">Pull request</a>
+                <a href="" class="hide-pull">Pulls</a>
+                <a href="" class="show-pull">Pull request</a>
                 <a href="">Issues</a>
                 <a href="">Marketplace</a>
                 <a href="">Explore</a>
@@ -37,29 +38,33 @@
 
     <div class="bottom-nav-wrapper">
         <div class="bottom-nav-container container">
-            <div class="empty-nav-div"></div>
-            <div class="bottom-nav">
+            <div class="empty-nav-div left-section">
+            </div>
+            <div class="bottom-nav right-section">
                 <a href=""><img src="src/images/book-open.svg" alt="book-open" class="nav-svg">Overview</a>
                 <a href="" class="active"><img src="src/images/repository.svg" alt="book-open" class="nav-svg">Repositories<p
                         class="repo-number">28</p></a>
                 <a href=""><img src="src/images/projects.svg" alt="book-open" class="nav-svg">Projects</a>
                 <a href=""><img src="src/images/packages.svg" alt="book-open" class="nav-svg">Packages</a>
+                <span class="stick-img nav-svg"></span>
             </div>
         </div>
     </div>
 
     <section class="page-body">
         <div class="container content-wrapper">
-            <aside class="profile">
+            <aside class="profile left-section">
                 <div class="profile-img-container">
                     <img src="" alt="" class="aside-profile-image">
+                    <!-- <img src="" alt="" class="stick-img"> -->
+                    
                     <div class="about-wrapper">
                         <div class="profile-name"></div>
                         <div class="about"></div>
                     </div>
                 </div>
             </aside>
-            <aside class="content">
+            <aside class="content right-section">
                 <div class="content-filter">
                     <input type="search" name="search" class="searchbar reposearch" placeholder="Find a repository...">
                 </div>

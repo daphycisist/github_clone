@@ -1,5 +1,5 @@
 const username = "daphycisist";
-const token = "ad8aa872f46cd3a1dd99d337b0e73d75cee1e2a9";
+const token = "535824cd4b227bfcd3a34b0900064dfcf30e60d1";
 // console.log(process.env);
 async function fetchGraphQL(text) {
   const GITHUB_AUTH_TOKEN = token;
@@ -92,7 +92,7 @@ const getMyGithubData = async () => {
     repoArray.map((repo) => {
       const repoLanguage = repo.primaryLanguage;
 
-      // console.log(repoLanguage)
+      console.log(repo)
       const repoContent = document.createElement("div");
       const repoDataWrapper = document.createElement("div");
       const repoData = document.createElement("div");
@@ -195,6 +195,22 @@ const getMyGithubData = async () => {
   } catch (error) {
     console.log(error.message);
   }
+
+
+
+  const profileTest = document.querySelector('aside-profile-image');
+  const stick = document.querySelector('stick-img');
+
+  var y = window.scrollY
+// get scroll position in px
+// console.log(el.scrollLeft, el.scrollTop);
+  
+  if (window.scrollY > 102) {
+    stick.style.display = "block"
+  }
+  
+  console.log(y)
+
 };
 
 getMyGithubData();
