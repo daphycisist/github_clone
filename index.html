@@ -28,7 +28,7 @@
                     <i class="fas fa-caret-down"></i>
                 </div>
                 <div class="nav-icon-container">
-                <img src="" alt="" id="profileimg">
+                <img src="" alt="" class="profileimg">
                     <i class="fas fa-caret-down"></i>
                 </div>
             </div>
@@ -41,21 +41,21 @@
             <div class="bottom-nav">
                 <a href=""><img src="src/images/book-open.svg" alt="book-open" class="nav-svg">Overview</a>
                 <a href="" class="active"><img src="src/images/repository.svg" alt="book-open" class="nav-svg">Repositories<p
-                        id="repo-number">28</p></a>
+                        class="repo-number">28</p></a>
                 <a href=""><img src="src/images/projects.svg" alt="book-open" class="nav-svg">Projects</a>
                 <a href=""><img src="src/images/packages.svg" alt="book-open" class="nav-svg">Packages</a>
             </div>
         </div>
     </div>
 
-    <section class="">
+    <section class="page-body">
         <div class="container content-wrapper">
             <aside class="profile">
                 <div class="profile-img-container">
-                    <img src="" alt="" id="aside-profile-image">
+                    <img src="" alt="" class="aside-profile-image">
                     <div class="about-wrapper">
-                        <div id="profile-name"></div>
-                        <div id="about"></div>
+                        <div class="profile-name"></div>
+                        <div class="about"></div>
                     </div>
                 </div>
             </aside>
@@ -64,16 +64,37 @@
                     <input type="search" name="search" class="searchbar reposearch" placeholder="Find a repository...">
                 </div>
                 <div class="repo-search-result">
-                    <p id="check"><span id="public-repo-number"></span> results for <span id="public-repo-number">public</span> repositories</p>
+                    <p class="check"><span class="public-repo-number"></span> results for <span class="public-repo-number">public</span> repositories</p>
                 </div>
                 <div class="repo-content-wrapper">
-                    <div id="repo-content">
+                    <!-- <div class="repo-content">
                     
-                    </div>
+                    </div> -->
                     <div></div>
                 </div>
             </aside>
         </div>
+        <footer class="footer container">
+            <div class="copyright">
+                <img src="/src/images/github-grey.svg" alt="">
+                <span>&copy;
+                    <script>document.write(new Date().getFullYear(), " GitHub, Inc.");</script>
+                </span>
+            </div>
+            <!-- <div class="foot-links"> -->
+                <a href="">Terms</a> 
+                <a href="">Privacy</a> 
+                <a href="">Security</a> 
+                <a href="">Status</a> 
+                <a href="">Help</a> 
+                <a href="">Contact GitHub</a> 
+                <a href="">Pricing</a> 
+                <a href="">API</a> 
+                <a href="">Training</a> 
+                <a href="">Blog</a> 
+                <a href="">About</a> 
+            <!-- </div> -->
+        </footer>
     </section>
     
     <script src="src/js/config.js"></script>
