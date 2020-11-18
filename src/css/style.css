@@ -676,6 +676,14 @@
       margin: 0;
     }
 
+    .foot-links {
+      display: block;
+    }
+
+    .about-search-bar {
+      margin: 0 20px;
+    }
+
     .footer {
       border-top: 0;
       flex-direction: column-reverse;
