@@ -1,102 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/src/css/style.css" media="screen" />
-    <script src="https://kit.fontawesome.com/ff3e17642a.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/src/css/style.css"
+      media="screen"
+    />
+    <script
+      src="https://kit.fontawesome.com/ff3e17642a.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Your Repositories</title>
-    <link rel="icon" href="/src/images/github.svg" type="image/svg">
-</head>
-<body>
+    <link rel="icon" href="/src/images/github.svg" type="image/svg" />
+  </head>
+  <body>
     <header>
-        <div class="top-nav nav">
-            <div class="navleft">
-                <i class="fab fa-github logo"></i>
-                <input type="search" name="search" class="searchbar" placeholder="Search or jump to... ">
-                <a href="">Pull request</a>
-                <a href="">Issues</a>
-                <a href="">Marketplace</a>
-                <a href="">Explore</a>
-            </div>
-            <div class="navright">
-                <i class="far fa-bell bell"></i>
-                <div class="nav-icon-container">
-                    <i class="fas fa-plus add-icon"></i>
-                    <i class="fas fa-caret-down"></i>
-                </div>
-                <div class="nav-icon-container">
-                <img src="" alt="" class="profileimg">
-                    <i class="fas fa-caret-down"></i>
-                </div>
-            </div>
+      <div class="top-nav nav">
+        <img src="/src/images/hamburger.svg" alt="" class="hamburger" />
+        <i class="fab fa-github logo" id="show-logo"></i>
+
+        <div class="navleft">
+          <i class="fab fa-github logo"></i>
+          <div class="search-wrapper">
+            <input
+              type="search"
+              name="search"
+              class="searchbar"
+              placeholder="Search or jump to... "
+            />
+            <img
+              src="https://github.githubassets.com/images/search-key-slash.svg"
+              alt=""
+              class="mr-2 header-search-key-slash"
+            />
+          </div>
+          <a href="" class="hide-pull">Pulls</a>
+          <a href="" class="show-pull">Pull request</a>
+          <a href="">Issues</a>
+          <a href="">Marketplace</a>
+          <a href="">Explore</a>
         </div>
+
+        <div class="navright">
+          <i class="far fa-bell bell"></i>
+
+          <div class="nav-icon-container">
+            <i class="fas fa-plus add-icon"></i>
+            <i class="fas fa-caret-down"></i>
+          </div>
+
+          <div class="nav-icon-container">
+            <img src="" alt="" class="profileimg" />
+            <i class="fas fa-caret-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="hamburger-nav">
+        <input
+          type="search"
+          name="search"
+          class="search"
+          placeholder="Search"
+        />
+        <a href="" class="links">Dashboard</a>
+        <a href="" class="links">Pull requests</a>
+        <a href="" class="links">Issues</a>
+        <a href="" class="links">Marketplace</a>
+        <a href="" class="links">Explore</a>
+        <a href="" class="links">Dashboard</a>
+        <a href="" class="links hamburger-profile">
+          <img src="" class="hamburger-img" />
+          <p class="hamburger-username"></p>
+        </a>
+        <a href="" class="links">
+          <img src="/src/images/logout.svg" class="hamburger-img" />
+          <p>Sign out</p>
+        </a>
+      </div>
     </header>
 
     <div class="bottom-nav-wrapper">
-        <div class="bottom-nav-container container">
-            <div class="empty-nav-div"></div>
-            <div class="bottom-nav">
-                <a href=""><img src="src/images/book-open.svg" alt="book-open" class="nav-svg">Overview</a>
-                <a href="" class="active"><img src="src/images/repository.svg" alt="book-open" class="nav-svg">Repositories<p
-                        class="repo-number">28</p></a>
-                <a href=""><img src="src/images/projects.svg" alt="book-open" class="nav-svg">Projects</a>
-                <a href=""><img src="src/images/packages.svg" alt="book-open" class="nav-svg">Packages</a>
-            </div>
+      <div class="bottom-nav-container">
+        <div class="empty-nav-div left-section">
+          <span class="stick-img-wrapper">
+            <img src="" class="stick-img" />
+            <p></p>
+          </span>
         </div>
+        <div class="bottom-nav right-section">
+          <a href=""
+            ><img
+              src="src/images/book-open.svg"
+              alt="book-open"
+              class="nav-svg"
+            />Overview</a
+          >
+          <a href="" class="active"
+            ><img
+              src="src/images/repository.svg"
+              alt="book-open"
+              class="nav-svg"
+            />Repositories
+            <p class="repo-number">28</p></a
+          >
+          <a href=""
+            ><img
+              src="src/images/projects.svg"
+              alt="book-open"
+              class="nav-svg"
+            />Projects</a
+          >
+          <a href=""
+            ><img
+              src="src/images/packages.svg"
+              alt="book-open"
+              class="nav-svg"
+            />Packages</a
+          >
+        </div>
+      </div>
     </div>
 
     <section class="page-body">
-        <div class="container content-wrapper">
-            <aside class="profile">
-                <div class="profile-img-container">
-                    <img src="" alt="" class="aside-profile-image">
-                    <div class="about-wrapper">
-                        <div class="profile-name"></div>
-                        <div class="about"></div>
-                    </div>
-                </div>
-            </aside>
-            <aside class="content">
-                <div class="content-filter">
-                    <input type="search" name="search" class="searchbar reposearch" placeholder="Find a repository...">
-                </div>
-                <div class="repo-search-result">
-                    <p class="check"><span class="public-repo-number"></span> results for <span class="public-repo-number">public</span> repositories</p>
-                </div>
-                <div class="repo-content-wrapper">
-                    <!-- <div class="repo-content">
-                    
-                    </div> -->
-                    <div></div>
-                </div>
-            </aside>
-        </div>
-        <footer class="footer container">
-            <div class="copyright">
-                <img src="/src/images/github-grey.svg" alt="">
-                <span>&copy;
-                    <script>document.write(new Date().getFullYear(), " GitHub, Inc.");</script>
-                </span>
+      <div class="container content-wrapper">
+        <aside class="profile left-section">
+          <div class="profile-img-container">
+            <div class="aside-profile-image-wrapper" id="checking">
+              <img src="" alt="" class="aside-profile-image" />
+              <div class="smile-icon">
+                <i class="far fa-smile"></i>
+                <span class="status">Set status</span>
+              </div>
             </div>
-            <!-- <div class="foot-links"> -->
-                <a href="">Terms</a> 
-                <a href="">Privacy</a> 
-                <a href="">Security</a> 
-                <a href="">Status</a> 
-                <a href="">Help</a> 
-                <a href="">Contact GitHub</a> 
-                <a href="">Pricing</a> 
-                <a href="">API</a> 
-                <a href="">Training</a> 
-                <a href="">Blog</a> 
-                <a href="">About</a> 
-            <!-- </div> -->
-        </footer>
+            <div class="about-wrapper">
+              <div class="profile-name"></div>
+              <div class="about"></div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="about-search-bar">
+          <i class="far fa-smile"></i>
+          <input type="search" class="search-input" placeholder="Set status" />
+        </div>
+        <div class="about about-display"></div>
+        <aside class="content right-section">
+          <div class="content-filter">
+            <input
+              type="search"
+              name="search"
+              class="searchbar reposearch"
+              placeholder="Find a repository..."
+            />
+          </div>
+          <div class="repo-search-result">
+            <div class="bottom-nav hide-bottom-nav"></div>
+            <p class="check">
+              <span class="public-repo-number"></span> results for
+              <span class="public-repo-number">public</span> repositories
+            </p>
+          </div>
+          <div class="repo-content-wrapper">
+            <div></div>
+          </div>
+        </aside>
+      </div>
+      <footer class="footer container">
+        <div class="copyright">
+          <img src="/src/images/github-grey.svg" alt="" />
+          <span
+            >&copy;
+            <script>
+              document.write(new Date().getFullYear(), " GitHub, Inc.");
+            </script>
+          </span>
+        </div>
+        <div class="foot-links">
+          <a href="">Terms</a>
+          <a href="">Privacy</a>
+          <a href="">Security</a>
+          <a href="">Status</a>
+          <a href="">Help</a>
+          <a href="">Contact GitHub</a>
+          <a href="">Pricing</a>
+          <a href="">API</a>
+          <a href="">Training</a>
+          <a href="">Blog</a>
+          <a href="">About</a>
+        </div>
+      </footer>
     </section>
-    
+
     <script src="src/js/config.js"></script>
-</body>
+  </body>
 </html>
