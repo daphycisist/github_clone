@@ -1,6 +1,5 @@
-const username = "daphycisist";
-const token = "72ab014c3731e8691ffe63f5079d447b2dcb0085";
-// console.log(process.env);
+const username = "Your github username";
+const token = "Your generated user token";
 async function fetchGraphQL(text) {
   const GITHUB_AUTH_TOKEN = token;
 
@@ -61,7 +60,9 @@ const opts = {
 const miniNavImgWrapper = document.querySelector(".stick-img-wrapper");
 const emptyNav = document.querySelector(".empty-nav-div");
 const navProfileImg = document.querySelector(".profileimg");
-const asideProfileImgWrapper = document.querySelector(".aside-profile-image-wrapper");
+const asideProfileImgWrapper = document.querySelector(
+  ".aside-profile-image-wrapper"
+);
 const asideProfileImg = document.querySelector(".aside-profile-image");
 const asideProfileName = document.querySelector(".profile-name");
 const asideProfileAbout = document.querySelectorAll(".about");
@@ -79,7 +80,6 @@ const userName = document.createElement("p");
 const getMyGithubData = async () => {
   try {
     const response = await fetchGraphQL(query);
-    // console.log(response.data.user.repositories.nodes);
     const { name, avatarUrl, login, bio, description } = response.data.user;
 
     const usernameData = login;
@@ -95,7 +95,7 @@ const getMyGithubData = async () => {
     userName.append(usernameData);
 
     asideProfileName.append(profileName, userName);
-    asideProfileAbout.forEach(item => item.append(about));
+    asideProfileAbout.forEach((item) => item.append(about));
 
     navMiniImg.src = avatarUrl;
 
@@ -103,33 +103,19 @@ const getMyGithubData = async () => {
     hamburgerUsername.innerHTML = login;
 
     hamburger.onclick = () => {
-      hamburgerNav.classList.toggle("hamburger-nav-show")
-    }
-
-
-
+      hamburgerNav.classList.toggle("hamburger-nav-show");
+    };
 
     const profileTest = document.querySelector(".profile-img-container");
-
-    // elementOffset = profileTest.getBoundingClientRect().bottom + window.scrollY;
 
     const asideUsername = asideProfileName.getElementsByTagName("p")[0];
     const emptyDivUsername = emptyNav.getElementsByTagName("p")[0];
 
-    // hamburgerProfileImg = hamburgerUserDetails.getElementsByTagName("img")[0]
-    // hamburgerProfileUsername = hamburgerUserDetails.getElementsByTagName("p")[0]
-
-    // hamburgerProfileImg.src = avatarUrl;
-    // hamburgerProfileUsername.append(name)
-
-
-    
-    // console.log(emptyDivUsername)
-
     const elemento = document.createElement("div");
     elemento.className = "elemento";
 
-    elementOffset = asideProfileImgWrapper.getBoundingClientRect().bottom + window.scrollY;
+    elementOffset =
+      asideProfileImgWrapper.getBoundingClientRect().bottom + window.scrollY;
     window.onscroll = () => {
       if (window.innerWidth > 768) {
         if (window.pageYOffset > elementOffset) {
@@ -143,14 +129,13 @@ const getMyGithubData = async () => {
           asideUsername.style.display = "block";
         }
       }
-      
     };
 
     window.onresize = () => {
       if (window.innerWidth > 768) {
-        hamburgerNav.classList.remove("hamburger-nav-show")
+        hamburgerNav.classList.remove("hamburger-nav-show");
       }
-    }
+    };
 
     repoArray.map((repo) => {
       const repoLanguage = repo.primaryLanguage;
@@ -178,12 +163,8 @@ const getMyGithubData = async () => {
       starSpan.className = "star-span";
 
       const { name, description, forkCount, stargazerCount, updatedAt } = repo;
-      // console.log(repo.parent)
 
       const forkedRepo = repo.parent;
-
-      // console.log(repo)
-      // console.log(repo.licenseInfo)
 
       repoTitle.innerHTML = name;
       repoData.append(repoTitle);
@@ -244,8 +225,6 @@ const getMyGithubData = async () => {
       repoContent.append(repoDataWrapper);
       repoContentWrapper.append(repoContent);
     });
-
-    // console.log(asideProfileName);
   } catch (error) {
     console.log(error.message);
   }
