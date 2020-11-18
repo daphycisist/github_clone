@@ -60,7 +60,9 @@ const opts = {
 const miniNavImgWrapper = document.querySelector(".stick-img-wrapper");
 const emptyNav = document.querySelector(".empty-nav-div");
 const navProfileImg = document.querySelector(".profileimg");
-const asideProfileImgWrapper = document.querySelector(".aside-profile-image-wrapper");
+const asideProfileImgWrapper = document.querySelector(
+  ".aside-profile-image-wrapper"
+);
 const asideProfileImg = document.querySelector(".aside-profile-image");
 const asideProfileName = document.querySelector(".profile-name");
 const asideProfileAbout = document.querySelectorAll(".about");
@@ -93,7 +95,7 @@ const getMyGithubData = async () => {
     userName.append(usernameData);
 
     asideProfileName.append(profileName, userName);
-    asideProfileAbout.forEach(item => item.append(about));
+    asideProfileAbout.forEach((item) => item.append(about));
 
     navMiniImg.src = avatarUrl;
 
@@ -101,9 +103,9 @@ const getMyGithubData = async () => {
     hamburgerUsername.innerHTML = login;
 
     hamburger.onclick = () => {
-      hamburgerNav.classList.toggle("hamburger-nav-show")
-    }
-    
+      hamburgerNav.classList.toggle("hamburger-nav-show");
+    };
+
     const profileTest = document.querySelector(".profile-img-container");
 
     const asideUsername = asideProfileName.getElementsByTagName("p")[0];
@@ -112,7 +114,8 @@ const getMyGithubData = async () => {
     const elemento = document.createElement("div");
     elemento.className = "elemento";
 
-    elementOffset = asideProfileImgWrapper.getBoundingClientRect().bottom + window.scrollY;
+    elementOffset =
+      asideProfileImgWrapper.getBoundingClientRect().bottom + window.scrollY;
     window.onscroll = () => {
       if (window.innerWidth > 768) {
         if (window.pageYOffset > elementOffset) {
@@ -126,14 +129,13 @@ const getMyGithubData = async () => {
           asideUsername.style.display = "block";
         }
       }
-      
     };
 
     window.onresize = () => {
       if (window.innerWidth > 768) {
-        hamburgerNav.classList.remove("hamburger-nav-show")
+        hamburgerNav.classList.remove("hamburger-nav-show");
       }
-    }
+    };
 
     repoArray.map((repo) => {
       const repoLanguage = repo.primaryLanguage;
@@ -161,7 +163,7 @@ const getMyGithubData = async () => {
       starSpan.className = "star-span";
 
       const { name, description, forkCount, stargazerCount, updatedAt } = repo;
-      
+
       const forkedRepo = repo.parent;
 
       repoTitle.innerHTML = name;
@@ -223,7 +225,6 @@ const getMyGithubData = async () => {
       repoContent.append(repoDataWrapper);
       repoContentWrapper.append(repoContent);
     });
-
   } catch (error) {
     console.log(error.message);
   }

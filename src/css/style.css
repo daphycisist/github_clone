@@ -11,7 +11,8 @@
   width: 100%;
 }
 
-.about-display, .about-search-bar {
+.about-display,
+.about-search-bar {
   display: none;
 }
 
@@ -34,10 +35,8 @@
 .navleft {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 50%;
-  width: 700px;
-  width: 40rem;
+  justify-content: flex-start;
+  width: 80%;
 }
 
 .hamburger {
@@ -46,17 +45,19 @@
 
 .navleft > .logo {
   font-size: 2.2rem;
+  padding-right: 10px;
 }
 
 .search-wrapper {
   position: relative;
   display: flex;
   align-items: center;
+  padding-right: 10px;
 }
 
 .search-wrapper > img {
   position: absolute;
-  right: 5px;
+  right: 15px;
 }
 
 .searchbar {
@@ -67,10 +68,27 @@
   border-radius: 7px;
   border: 1px solid #444d56;
   background-color: transparent;
+  color: white;
 }
 
 .searchbar::placeholder {
   color: #c8c9cb;
+}
+
+.searchbar:focus {
+  background-color: #444d56;
+}
+
+.nav-anchors {
+  max-width: fit-content;
+  width: 70%;
+}
+
+.nav-anchors a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0 5px;
 }
 
 .hide-pull {
@@ -297,7 +315,6 @@
   width: max-content;
   display: none;
   font-size: 12px;
-
 }
 
 .smile-icon {
@@ -325,11 +342,11 @@
   padding: 0 10px;
 }
 
-.smile-icon:hover .status, .smile-icon:hover i {
+.smile-icon:hover .status,
+.smile-icon:hover i {
   display: block;
   color: #006eed;
   transition: all 0.2s;
-
 }
 
 .stick-img-wrapper {
@@ -541,6 +558,10 @@
   .copyright > img {
     display: none;
   }
+
+  .nav-anchors {
+    display: flex;
+  }
 }
 
 @media (max-width: 810px) {
@@ -565,13 +586,14 @@
     display: none;
   }
 
-  .about-display, .about-search-bar  {
+  .about-display,
+  .about-search-bar {
     display: flex;
     line-height: 30px;
   }
 
   .about-search-bar {
-    color:  #444d56;
+    color: #444d56;
     align-items: center;
     position: relative;
   }
@@ -665,28 +687,29 @@
     width: 100%;
   }
 
-  .foot-links, .copyright {
+  .foot-links,
+  .copyright {
     overflow: unset;
     align-self: start;
   }
 }
 
 @media (max-width: 544px) {
-    .container {
-      margin: 0;
-    }
-
-    .foot-links {
-      display: block;
-    }
-
-    .about-search-bar {
-      margin: 0 20px;
-    }
-
-    .footer {
-      border-top: 0;
-      flex-direction: column-reverse;
-      line-height: 50px;
-    }
+  .container {
+    margin: 0;
   }
+
+  .foot-links {
+    display: block;
+  }
+
+  .about-search-bar {
+    margin: 0 20px;
+  }
+
+  .footer {
+    border-top: 0;
+    flex-direction: column-reverse;
+    line-height: 50px;
+  }
+}
