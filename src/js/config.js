@@ -1,5 +1,5 @@
-const username = "daphycisist";
-const token = "72ab014c3731e8691ffe63f5079d447b2dcb0085";
+const username = "Your Username";
+const token = "Your github access token";
 async function fetchGraphQL(text) {
   const GITHUB_AUTH_TOKEN = token;
 
